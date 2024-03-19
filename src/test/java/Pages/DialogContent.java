@@ -20,6 +20,9 @@ public DialogContent(){
     public WebElement password;
     @FindBy(css="button[aria-label='LOGIN']")
     public WebElement loginButton;
+    @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
+    public WebElement headText;
+
 
 
 }

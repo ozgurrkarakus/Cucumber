@@ -18,6 +18,7 @@ public class GWD {
         return driver;
     }
 
+
     public static void quitDriver(){
 
         //test sonucu ekranı bir miktar beklesin diye
