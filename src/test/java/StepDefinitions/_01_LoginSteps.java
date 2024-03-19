@@ -18,6 +18,8 @@ public class _01_LoginSteps {
         //password.sendKeys("TechnoStudy123");
 
         System.out.println("username ve şifre gönderildi");
+
+
     }
 
     @Then("User should login successfully")
