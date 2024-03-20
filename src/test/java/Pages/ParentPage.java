@@ -12,6 +12,7 @@ import org.testng.Assert;
 import java.time.Duration;
 
 public class ParentPage {
+
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
 
     public void myClick(WebElement element){
@@ -35,9 +36,10 @@ public class ParentPage {
 
     public void verifyContainsText(WebElement element, String value){
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
-        Assert.assertTrue(element.getText().toLowerCase().equals(value.toLowerCase()));
-    new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
-    //Sayfaya ESC Tuşu Gönderildi
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
+
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+        //sayfaya ESC tuşu gönderildi
     }
 
 }
