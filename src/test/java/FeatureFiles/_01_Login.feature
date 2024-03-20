@@ -1,3 +1,8 @@
+# Login fonksiyon kontrolü
+# Önce Siteye git  (driver.get)
+# Sonra Login bilgilerini gir (username password sendkeys)
+# Sonra giriş yaptığını kontrol (verify)
+
 Feature: Login functionality
 
   Scenario: Login with valid username and password
