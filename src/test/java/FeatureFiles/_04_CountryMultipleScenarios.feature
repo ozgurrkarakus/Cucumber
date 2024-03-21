@@ -11,5 +11,5 @@ Feature: Country Multi Scenario
     Then Success message should be displayed
 
   Scenario: Create a Country 2
-    When Create a country name as "ismTR34" code as "ismUlk34Kod"
+    When Create a country name as "ismUlk12" code as "ismUlk12Kod"
     Then Success message should be displayed
