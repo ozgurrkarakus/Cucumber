@@ -4,6 +4,7 @@ import Utilities.GWD;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DialogContent extends ParentPage{
 
@@ -43,6 +44,32 @@ public class DialogContent extends ParentPage{
 
     @FindBy(xpath = "//div[contains(text(),'already')]")
     public WebElement alreadyExist;
+
+    @FindBy(xpath = "//ms-text-field//input[@data-placeholder='Name']")
+    public WebElement searchInput;
+
+    @FindBy(xpath = "//div[@class='control-full']/button")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "//ms-delete-button//button")
+    public WebElement deleteImageBtn;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement deleteDialogBtn;
+
+
+    public void deleteItem(String deleteName){
+        mySendKeys(searchInput, deleteName);
+        myClick(searchButton);
+
+        //search butonun tıklanabilir olana kadar bekle
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+
+        myClick(deleteImageBtn);
+        myClick(deleteDialogBtn);
+    }
+
+
 
 
 
