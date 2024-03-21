@@ -18,5 +18,3 @@ Feature: Citizenship Functionality
   Scenario: Create a Citizenship with parameter
     When Create a CitizenShip name as "ismetcs1" shortkod as "icskod1"
     Then Already exist message should be displayed
-
-
