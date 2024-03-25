@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -63,11 +64,13 @@ public class DialogContent extends ParentPage{
         myClick(searchButton);
 
         //search butonun tıklanabilir olana kadar bekle
+        //wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"),1));
         wait.until(ExpectedConditions.elementToBeClickable(searchButton));
 
         myClick(deleteImageBtn);
         myClick(deleteDialogBtn);
     }
+
     public WebElement getWebElement(String strElement){
 
         switch (strElement){
@@ -76,11 +79,11 @@ public class DialogContent extends ParentPage{
             case "codeInput" : return this.codeInput;
             case "saveButton" : return this.saveButton;
             case "shortName" : return this.shortName;
+
         }
 
         return null;
     }
-
 
 
 
