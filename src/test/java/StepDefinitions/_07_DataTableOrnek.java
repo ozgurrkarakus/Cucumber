@@ -39,4 +39,3 @@ public class _07_DataTableOrnek {
 
     }
 }
-
