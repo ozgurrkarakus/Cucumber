@@ -21,8 +21,8 @@ public class _08_DataTableSteps {
             WebElement linkWebElemnt= ln.getWebElement(strLinkList.get(i));
             ln.myClick(linkWebElemnt);
         }
-
     }
+
     @And("Click on the Element in Dialog")
     public void clickOnTheElementInDialog(DataTable butonlar) {
         List<String> strButtonList= butonlar.asList(String.class);
@@ -54,8 +54,3 @@ public class _08_DataTableSteps {
 
     }
 }
-
-
-
-
-
