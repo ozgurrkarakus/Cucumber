@@ -25,8 +25,10 @@ public class LeftNav extends ParentPage{
 
     @FindBy(xpath = "(//span[text()='Nationalities'])[1]")
     public WebElement nationalities;
+
     @FindBy(xpath = "//span[text()='Fees']")
     public WebElement fees;
+
     @FindBy(xpath = "(//span[text()='Inventory'])[1]")
     public WebElement inventory;
 
@@ -35,6 +37,7 @@ public class LeftNav extends ParentPage{
 
     @FindBy(xpath = "//span[text()='Item Categories']")
     public WebElement inventoryCat;
+
 
 
     public WebElement getWebElement(String strElement){

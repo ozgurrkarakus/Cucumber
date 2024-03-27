@@ -57,6 +57,7 @@ public class DialogContent extends ParentPage{
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteDialogBtn;
+
     @FindBy(xpath = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
     public WebElement integrationCode;
 
@@ -65,13 +66,14 @@ public class DialogContent extends ParentPage{
 
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
     public WebElement toggleBar;
+
     @FindBy(xpath = "//mat-chip-list[@formcontrolname='roles' ]//input")
     public WebElement userType;
 
     @FindBy(xpath = "//span[text()=' Student ']")
     public WebElement student;
-
-
+    @FindBy(xpath = "//span[text()=' Administrator ']")
+    public WebElement administrator;
 
 
     public void deleteItem(String deleteName){
@@ -99,7 +101,7 @@ public class DialogContent extends ParentPage{
             case "toggleBar" : return this.toggleBar;
             case "userType" : return this.userType;
             case "student" : return this.student;
-
+            case "administrator" : return this.administrator;
 
         }
 

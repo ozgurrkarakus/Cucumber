@@ -1,3 +1,8 @@
+#Senaryo :
+#  Inventory Bölümündeki
+#  Item Categories Çalışmasını test ediniz
+#  girişi yapıp , sonrasında silmesini yapınız
+
 Feature: Inventory functionality
 
   Background:
@@ -19,7 +24,7 @@ Feature: Inventory functionality
 
     And Click on the Element in Dialog
       | userType |
-      | <type>  |
+      | <type>   |
 
     And Click on the Element in Dialog
       | saveButton |
@@ -30,10 +35,10 @@ Feature: Inventory functionality
       | <name> |
 
     Then Success message should be displayed
-Examples:
-  | name   | type          |
-  | isInv1 | student       |
-  | isInv2 | administrator |
-  | isInv3 | student       |
-  | isInv4 | administrator |
-  | isInv5 | student       |
+    Examples:
+      | name   | type          |
+      | isInv1 | student       |
+      | isInv2 | administrator |
+      | isInv3 | student       |
+      | isInv4 | administrator |
+      | isInv5 | student       |
