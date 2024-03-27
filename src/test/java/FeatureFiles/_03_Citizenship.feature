@@ -4,6 +4,7 @@
 
 Feature: CitizenShip Functionality
 
+  @SmokeTest @Regression
   Scenario: Create a CitizenShip
     Given Navigate to Campus
     When Enter username and password and click login button
