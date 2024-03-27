@@ -5,7 +5,7 @@ Feature: Inventory functionality
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Create Inventory and Delete
+  Scenario Outline: Create Inventory and Delete
     And Click on the Element in LeftNav
       | inventory      |
       | setupInventory |
@@ -19,7 +19,7 @@ Feature: Inventory functionality
 
     And Click on the Element in Dialog
       | userType |
-      | student  |
+      | <type>  |
 
     And Click on the Element in Dialog
       | saveButton |
@@ -30,3 +30,10 @@ Feature: Inventory functionality
       | <name> |
 
     Then Success message should be displayed
+Examples:
+  | name   | type          |
+  | isInv1 | student       |
+  | isInv2 | administrator |
+  | isInv3 | student       |
+  | isInv4 | administrator |
+  | isInv5 | student       |
