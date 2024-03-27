@@ -65,6 +65,11 @@ public class DialogContent extends ParentPage{
 
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
     public WebElement toggleBar;
+    @FindBy(xpath = "//mat-chip-list[@formcontrolname='roles' ]//input")
+    public WebElement userType;
+
+    @FindBy(xpath = "//span[text()=' Student ']")
+    public WebElement student;
 
 
 
@@ -92,6 +97,9 @@ public class DialogContent extends ParentPage{
             case "integrationCode" : return this.integrationCode;
             case "priorityCode" : return this.priorityCode;
             case "toggleBar" : return this.toggleBar;
+            case "userType" : return this.userType;
+            case "student" : return this.student;
+
 
         }
 
