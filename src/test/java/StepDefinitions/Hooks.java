@@ -17,21 +17,16 @@ public class Hooks {
         // System.out.println("Senaryo başladı");
     }
 
-   // Cucumber ın Annotation ı
     @After // Cucumber ın Annotation ı
-    // her senaryodan sonra çalışır
+            // her senaryodan sonra çalışır
     public void after(Scenario senaryo){
 
         //senaryo fail olduysa ekran kaydı al
         if (senaryo.isFailed()){
-            TakesScreenshot ts=(TakesScreenshot) driver;
-            File hafizadakiHali= ts.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(hafizadakiHali, new File("ekranGoruntuler\\screenshot.jpg"));
+            TakesScreenshot ts=(TakesScreenshot) GWD.getDriver();
+            byte[] hafizadakiHali= ts.getScreenshotAs(OutputType.BYTES);
+            senaryo.attach(hafizadakiHali, "image/png", "screenshot name");
         }
-        // her senaryodan sonra çalışır
-
-
-
 
         GWD.quitDriver();
     }
