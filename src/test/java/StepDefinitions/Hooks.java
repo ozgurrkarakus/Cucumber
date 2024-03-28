@@ -3,6 +3,12 @@ package StepDefinitions;
 import Utilities.GWD;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import java.io.File;
 
 public class Hooks {
 
@@ -11,9 +17,22 @@ public class Hooks {
         // System.out.println("Senaryo başladı");
     }
 
+   // Cucumber ın Annotation ı
     @After // Cucumber ın Annotation ı
-            // her senaryodan sonra çalışır
-    public void after(){
+    // her senaryodan sonra çalışır
+    public void after(Scenario senaryo){
+
+        //senaryo fail olduysa ekran kaydı al
+        if (senaryo.isFailed()){
+            TakesScreenshot ts=(TakesScreenshot) driver;
+            File hafizadakiHali= ts.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(hafizadakiHali, new File("ekranGoruntuler\\screenshot.jpg"));
+        }
+        // her senaryodan sonra çalışır
+
+
+
+
         GWD.quitDriver();
     }
 
