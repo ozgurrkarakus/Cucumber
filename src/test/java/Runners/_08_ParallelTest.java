@@ -14,14 +14,12 @@ import org.testng.annotations.Parameters;
 )
 public class _08_ParallelTest extends AbstractTestNGCucumberTests {
 
-@BeforeClass
+    @BeforeClass
     @Parameters("browserTipi")
-    public void beforeClass(String browserName){
-
-
-    GWD.threadBrowserName.set(browserName);
-}
-
-
+    public void beforeClass(String browserName)
+    {
+        GWD.threadBrowserName.set(browserName);
+        //Bu thread e browser adını set ettim.
+    }
 
 }
