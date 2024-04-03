@@ -1,5 +1,6 @@
 package ApachePOI;
 
+import org.apache.http.impl.execchain.ServiceUnavailableRetryExec;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -15,13 +16,12 @@ public class _05_GetASpecificData_2 {
 
     }
 
-
     public static String ExceldenGetir(String aranan) throws IOException {
 
         String path = "src/test/java/ApachePOI/resource/LoginData.xlsx";
         FileInputStream input = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(input);
-        Sheet sheet = workbook.getSheetAt(0);
+        Sheet sheet = workbook.getSheetAt(0); //ilk çalışma sayfasını aldım
 
         String bulunan = "";
 
@@ -41,3 +41,8 @@ public class _05_GetASpecificData_2 {
     }
 
 }
+
+
+
+
+
