@@ -5,7 +5,6 @@ import PROJECT.Tools;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.IExpectedExceptionsHolder;
 import org.testng.annotations.Test;
 
 public class US_016 extends BaseDriver {
@@ -13,7 +12,7 @@ public class US_016 extends BaseDriver {
 
     @Test
     public void test1() {
-        Us_16_Elements element = new Us_16_Elements();
+        Campus_Elements element = new Campus_Elements();
         LoginTestMersys();
         Tools.Bekle(2);
         element.granding.click();
@@ -23,7 +22,7 @@ public class US_016 extends BaseDriver {
         String expectedUrl = "https://test.mersys.io/student-grading";
         String actualUrl = driver.getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl, "URL doğrulaması başarısız!");
-        System.out.println("Course Grade Göründü");
+        System.out.println("Course Grade, Göründü");
         element.Student_Transcript.click();
         Tools.Bekle(2);
         WebElement studentTranscriptElement = element.Student_Transcript;
