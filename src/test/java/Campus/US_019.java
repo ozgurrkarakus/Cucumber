@@ -28,27 +28,18 @@ public class US_019 extends BaseDriver {
 
         }
 
-        element.Assignments.click();
-
-       Robot robot = new Robot();
-
-       for (int i = 0; i < 10; i++) {
-           robot.keyPress(KeyEvent.VK_TAB);
-           robot.keyRelease(KeyEvent.VK_TAB);
-       }
-
-       robot.keyPress(KeyEvent.VK_ENTER);
-       robot.keyRelease(KeyEvent.VK_ENTER);
-      Tools.Bekle(2);
-
-
 
         element.Status.click();
-        Tools.Bekle(2);
         element.Published.click();
-       //Select published = new Select(element.Status);
-       //published.selectByIndex(1);
-
+        element.Space.click();
+element.Semester.click();
+element.All.click();
+element.MathHomework.click();
+element.Discussion.click();
+element.Contacts.click();
+element.Zuckerberg.click();
+element.Textarea.sendKeys("How do you think about this math homework?");
+Tools.Bekle(5);
 
     }
 
