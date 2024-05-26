@@ -29,17 +29,77 @@ public class US_019 extends BaseDriver {
         }
 
 
-        element.Status.click();
-        element.Published.click();
+        Tools.Bekle(1);
         element.Space.click();
-element.Semester.click();
-element.All.click();
-element.MathHomework.click();
-element.Discussion.click();
-element.Contacts.click();
-element.Zuckerberg.click();
-element.Textarea.sendKeys("How do you think about this math homework?");
-Tools.Bekle(5);
+
+
+        element.Semester.click();
+        element.All.click();
+        Tools.Bekle(2);
+
+
+        element.MathHomework.click();
+        Tools.Bekle(2);
+
+        Robot robot = new Robot();
+
+        for (int i = 0; i < 1; i++) {
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+        }
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Tools.Bekle(1);
+        for (int i = 0; i < 8; i++) {
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+        }
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Tools.Bekle(1);
+        Tools.Bekle(2);
+        String filePath = "deneme";
+        for (char c : filePath.toCharArray()) {
+            int keyCode = KeyEvent.getExtendedKeyCodeForChar(c);
+            if (KeyEvent.CHAR_UNDEFINED == keyCode) {
+                throw new RuntimeException(
+                        "Karakter için tuş kodu bulunamadı: '" + c + "'");
+            }
+            robot.keyPress(keyCode);
+            robot.keyRelease(keyCode);
+        }
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        element.Textarea.sendKeys("How do you think about this math homework?");
+
+        Tools.Bekle(2);
+
+
+        for (int i = 0; i < 3; i++) {
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+        }
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+
+
+      //  element.Person.click();
+        //element.Textarea.sendKeys("How do you think about this math homework?");
+
+
+        element.Submit.click();
+        Tools.Bekle(1);
+        boolean isMeVisible = wait.until(ExpectedConditions.visibilityOf(element.Me)).isDisplayed();
+        if (isMeVisible) {
+            System.out.println("Mesaj Gönderildi.");
+        } else {
+            System.out.println("Mesaj Gönderilmedi.");
+        }
 
     }
 
