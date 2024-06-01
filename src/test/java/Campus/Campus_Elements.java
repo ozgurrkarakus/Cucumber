@@ -41,7 +41,7 @@ public class Campus_Elements {
     public WebElement Discussion;
     @FindBy(xpath = "//fa-icon//*[local-name()='svg' and @data-icon='users']")
     public WebElement Contacts;
-    @FindBy(xpath = "//*[@id=\"7\"]/div/div/discussion-dialog/ms-dialog/ms-dialog-content/div/ams-comment/div/div[3]/div/div[2]/mat-selection-list/mat-list-option[1]/span/span/div")
+    @FindBy(xpath = "//span[text()='Mark Zuckerberg']")
     public WebElement Person;
     @FindBy(xpath = "//textarea[@formcontrolname='commentText']")
     public WebElement Textarea;
@@ -51,16 +51,20 @@ public class Campus_Elements {
     public WebElement Me;
     @FindBy(xpath = "//span[contains(@class, 'ng-star-inserted') and text()='Print']")
     public WebElement Print;
-
-//div[contains(@class, 'comment-member-name') and text()=' Me ']
-  //  ms-icon-button[icon='paper-plane'] svg[data-icon='paper-plane']
-    //<span class="title dialog-title" style="display: flex; overflow: hidden; text-overflow: ellipsis; font-size: 18px;"> Student_5 11A - Mark Zuckerberg</span>
-//textarea[@formcontrolname='commentText']
-//user-image[@class='ng-tns-c2158703769-61']//img[@class='avatar-mini ng-star-inserted'])[1]
-//fa-icon//*[local-name()='svg' and @data-icon='users']
-//span[contains(@class, 'submission-status')])[3]
-//mat-option[@value='all']
-//mat-select[@id='mat-select-4']
+    @FindBy(xpath = "(//button[@mat-icon-button and @matbadgeoverlap='false' and @matbadgesize='small'])[1]")
+    public WebElement Statistics_I;
+    @FindBy(xpath = "(//button[@mat-icon-button and @matbadgeoverlap='false' and @matbadgesize='small' and contains(@class, 'mat-mdc-tooltip-trigger')])[2]")
+    public WebElement Statistics_Mark;
+    @FindBy(xpath = "(//button[@mat-icon-button and @matbadgeoverlap='false' and @matbadgesize='small' and contains(@class, 'mat-mdc-tooltip-trigger')])[3]")
+    public WebElement Geo_I;
+    @FindBy(xpath = "(//button[@mat-icon-button and @matbadgeoverlap='false' and @matbadgesize='small' and contains(@class, 'mat-mdc-tooltip-trigger')])[4]")
+    public WebElement Geo_Submit;
+    @FindBy(xpath = "(//button[@mat-icon-button and @matbadgeoverlap='false' and @matbadgesize='small' and contains(@class, 'mat-mdc-tooltip-trigger')])[5]")
+    public WebElement Geo_Mark;
+    @FindBy(xpath = "(//button[@mat-icon-button and contains(@class, 'mdc-icon-button') and contains(@class, 'mat-mdc-icon-button')])[3]")
+    public WebElement Back;
+    @FindBy(xpath = "//div[contains(@class, 'w-70-p') and text()='11A-Statistics']\n")
+    public WebElement Statistics_11A;
+    @FindBy(xpath = "//button[@aria-label='Close dialog']//span[@class='mat-mdc-focus-indicator']")
+    public WebElement Back_Icon;
 }
-//*[@id="mat-option-15"]/span
-//div[@class='cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing']

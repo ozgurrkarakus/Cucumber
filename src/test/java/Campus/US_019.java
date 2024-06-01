@@ -55,6 +55,7 @@ public class US_019 extends BaseDriver {
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
         }
+       // element.Person.click();
 
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
@@ -88,8 +89,8 @@ public class US_019 extends BaseDriver {
 
 
 
-      //  element.Person.click();
-        //element.Textarea.sendKeys("How do you think about this math homework?");
+     // element.Person.click();
+        element.Textarea.sendKeys("How do you think about this math homework?");
 
 
         element.Submit.click();
